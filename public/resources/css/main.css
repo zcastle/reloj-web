@@ -1,0 +1,8 @@
+table#tblEmpleados .ver {
+    cursor: pointer;
+    color: #0366d6;
+}
+
+table#tblEmpleados span.ver:hover {
+    font-weight: bold;
+}
