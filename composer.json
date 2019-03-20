@@ -18,7 +18,8 @@
         "monolog/monolog": "^1.17",
         "slim/twig-view": "^2.4",
         "illuminate/database": "~5.1",
-        "setasign/fpdf": "1.8.1"
+        "setasign/fpdf": "1.8.1",
+        "phpoffice/phpspreadsheet": "^1.6"
     },
     "autoload": {
         "psr-4": {

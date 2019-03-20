@@ -59,6 +59,8 @@ var ver = function(codigo, option){
             })
         } else if(option == 1){
             window.open($(location).attr('href') + "pdf/" + codigo + "/0");
+        } else if(option == 2){
+            window.open($(location).attr('href') + "exportar/" + codigo + "/0");
         }
     }else if($(".radioOpciones:checked").val() == "1"){
         var del = $("#txtDel").val();
@@ -81,6 +83,8 @@ var ver = function(codigo, option){
             })
         } else if(option == 1){
             window.open($(location).attr('href') + "pdf/" + codigo + "/0/" + del + "/" + al);
+        } else if(option == 2){
+            window.open($(location).attr('href') + "exportar/" + codigo + "/0/" + del + "/" + al);
         }
     }
 }
@@ -112,23 +116,16 @@ $(document).ready(function(){
         $('#modalVerOpciones').modal('show')
     });
 
-    $(".navbar button.btn-primary").click(function(){
-        console.log("narvar pdf");
-
-        $("#txtCodigo").val(0);
-        
-        $(".modalVerNombre").text("Todos");
-        $('.radioOpciones[name="radioOpciones"]').filter('[value="0"]').prop('checked', true);
-        $('.txtDelAl').val("");
-        $('#modalVerOpciones').modal('show')
-    });
-
     $("#modalVerOpciones button.btn-primary").click(function(){
         ver($("#txtCodigo").val(), 0);
     });
 
     $("#modalVerOpciones button.btn-warning").click(function(){
         ver($("#txtCodigo").val(), 1);
+    });
+
+    $("#modalVerOpciones button.btn-success").click(function(){
+        ver($("#txtCodigo").val(), 2);
     });
 
     $(".radioOpciones").click(function(){
